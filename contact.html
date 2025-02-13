@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DEX</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><div class="logo"> <img src="logo/png/logo-no-background.png" alt="DEX"></div></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Contact Content -->
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>If you'd like to get in touch, feel free to reach out via email or follow me on social media.</p>
+
+        <!-- Email Input Box -->
+        <div class="email-box">
+            <input type="email" id="email-input" placeholder="Enter your email">
+            <button id="submit-btn">Submit</button>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.youtube.com/@dex1789" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/dex.egx?igsh=anZ1Z2FwODM5NWh2" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Handle email submission
+        document.getElementById('submit-btn').addEventListener('click', () => {
+            const email = document.getElementById('email-input').value;
+            if (email) {
+                alert(`Thank you! We'll contact you at ${email}.`);
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>

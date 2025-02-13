@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Editor & Filmmaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><div class="logo"> <img src="logo/png/logo-no-background.png" alt="DEX"></div></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+       
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Main Video -->
+        <div class="main-video">
+            <video controls autoplay>
+                <source src="assets/La Haine - Telephone (Alternative music video).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-info">
+                <h1 id="mainVideoTitle">La Haine - Telephone</h1>
+                <p id="mainVideoDescription">
+                    <span class="truncated">This is the beginning of the main video description. It will be truncated...</span>
+                    <span class="full" style="display: none;">This is the full description of the main video. It will be shown when you click "Read More".</span>
+                </p>
+                <button id="readMoreBtn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Video Queue -->
+        <div class="video-queue">
+            <div class="video-item">
+                <video controls>
+                    <source src="assets/-474_4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-info-queue">
+                <h1 id="mainVideoTitle">Moon - stormy</h1>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="assets/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-info-queue">
+                <h1 id="mainVideoTitle">Moon - stormy</h1>
+            </div>
+    </div>
+        <div class="video-queue" id="videoQueue">
+            <!-- Video items will be dynamically inserted here -->
+        </div>
+    </div>
+    <div class="more-videos">
+        <a href="gallery.html" class="more-videos-btn">More Videos</a>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

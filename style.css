@@ -1,0 +1,738 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#lock-screen {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#code-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#unlock-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#unlock-btn:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: #ff4444;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#video-container {
+    margin-top: 20px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff; /* Blue navbar */
+    padding: 10px 20px;
+    position: absolute;
+    margin-bottom: 20px;
+    width: 120%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffdd57; /* Yellow hover effect */
+}
+
+/* Container Styles */
+.container {
+    margin-top: 110px; /* Increased margin to account for navbar + 10px */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allow container to grow and center content */
+}
+
+/* Main Video Styles */
+.main-video {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-video video {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Queue Styles */
+.video-queue {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto; /* Horizontal scrolling for small screens */
+    padding: 20px;
+    width: 100%;
+}
+
+.video-item {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 300px; /* Fixed width for each video item */
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff; /* Blue navbar */
+    padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffdd57; /* Yellow hover effect */
+}
+
+/* Container Styles */
+.containerabout {
+    margin-top: 100px; /* Adjusted for navbar */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Upload Form Styles */
+#uploadForm {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+#uploadForm input[type="text"],
+#uploadForm textarea,
+#uploadForm input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #444;
+    color: #ffffff;
+}
+
+#uploadForm textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#uploadForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#uploadForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Logo Styles */
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo img {
+    border-radius: 50%; /* Optional: Makes the logo circular */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* About Text Styles */
+.about-text {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons Styles */
+.social-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons .icon {
+    font-size: 32px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #ffdd57; /* Yellow hover effect */
+}
+.logo{
+    width: 1%;
+    height: 2px;
+
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff; /* Blue navbar */
+    padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Space between links and logo */
+    align-items: center; /* Vertically center items */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffdd57; /* Yellow hover effect */
+}
+
+/* Logo Styles */
+.logo img {
+    height: 30px; /* Same height as the navbar links */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: Makes the logo circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow */
+}
+/* Contact Page Styles */
+.container {
+    margin-top: 100px; /* Adjusted for navbar */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* Email Input Box Styles */
+.email-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+#email-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #444;
+    color: #ffffff;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Social Media Links Styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 32px;
+    color: #007bff; /* Blue color */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffdd57; /* Yellow hover effect */
+}
+/* Main Video Styles */
+.container {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px; /* Add this line */
+
+    max-width: 1200px;
+}
+.main-video {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-video video {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-info {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.video-info h1 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.video-info p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.video-info button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-info button:hover {
+    background-color: #0056b3;
+}
+/* Main Video Styles */
+.main-video {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-video video {
+    width: 120%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-info {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.video-info h1 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.video-info p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.video-info button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-info button:hover {
+    background-color: #0056b3;
+}
+
+/* Video Queue Styles */
+.video-queue {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto; /* Horizontal scrolling for small screens */
+    padding: 20px;
+    width: 100%;
+}
+
+.video-item {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-item h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.video-info-queue h1 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+/* More Videos Button Styles */
+.more-videos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.more-videos-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-videos-btn:hover {
+    background-color: #0056b3;
+}
+/* Video Grid Styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-item h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Video Grid Styles */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    width: 300px; /* Fixed width for each video container */
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-item h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.video-item p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+/* Lock Screen Styles */
+#lockScreen {
+    text-align: center;
+    margin-top: 100px; /* Adjusted for navbar */
+}
+
+#codeInput {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#unlockBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#unlockBtn:hover {
+    background-color: #0056b3;
+}
+
+#errorMessage {
+    color: #ff4444;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main Content Styles */
+#mainContent {
+    margin-top: 100px; /* Adjusted for navbar */
+}

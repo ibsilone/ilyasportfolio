@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Editor & Filmmaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><div class="logo"> <img src="logo/png/logo-no-background.png" alt="DEX"></div></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Content -->
+    <div class="container">
+        <h1>Gallery</h1>
+        <p>Here are all the videos in my portfolio.</p>
+
+        <!-- Video Grid -->
+        <div class="video-grid" id="videoGrid">
+            <!-- Video items will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample video data (replace with data from your backend)
+        const videos = [
+            {
+                title: "Video 1",
+                description: "This is the description for Video 1. It can be long and will be truncated initially.",
+                file_path: "video1.mp4"
+            },
+            {
+                title: "Video 2",
+                description: "This is the description for Video 2. It can be long and will be truncated initially.",
+                file_path: "video2.mp4"
+            },
+            {
+                title: "Video 3",
+                description: "This is the description for Video 3. It can be long and will be truncated initially.",
+                file_path: "video3.mp4"
+            },
+            {
+                title: "Video 4",
+                description: "This is the description for Video 4. It can be long and will be truncated initially.",
+                file_path: "video4.mp4"
+            },
+            {
+                title: "Video 5",
+                description: "This is the description for Video 5. It can be long and will be truncated initially.",
+                file_path: "video5.mp4"
+            },
+            {
+                title: "Video 6",
+                description: "This is the description for Video 6. It can be long and will be truncated initially.",
+                file_path: "video6.mp4"
+            }
+        ];
+
+        // Function to truncate text
+        function truncateText(text, maxLength) {
+            return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+        }
+
+        // Function to create a video item
+        function createVideoItem(video) {
+            const videoItem = document.createElement('div');
+            videoItem.className = 'video-item';
+
+            const videoPlayer = document.createElement('video');
+            videoPlayer.src = video.file_path;
+            videoPlayer.controls = true;
+
+            const videoTitle = document.createElement('h3');
+            videoTitle.textContent = video.title;
+
+            const videoDescription = document.createElement('p');
+            videoDescription.innerHTML = `
+                <span class="truncated">${truncateText(video.description, 100)}</span>
+                <span class="full" style="display: none;">${video.description}</span>
+            `;
+
+            const readMoreBtn = document.createElement('button');
+            readMoreBtn.textContent = 'Read More';
+            readMoreBtn.addEventListener('click', () => {
+                const truncated = videoDescription.querySelector('.truncated');
+                const full = videoDescription.querySelector('.full');
+
+                if (truncated.style.display === 'none') {
+                    truncated.style.display = 'inline';
+                    full.style.display = 'none';
+                    readMoreBtn.textContent = 'Read More';
+                } else {
+                    truncated.style.display = 'none';
+                    full.style.display = 'inline';
+                    readMoreBtn.textContent = 'Read Less';
+                }
+            });
+
+            videoItem.appendChild(videoPlayer);
+            videoItem.appendChild(videoTitle);
+            videoItem.appendChild(videoDescription);
+            videoItem.appendChild(readMoreBtn);
+
+            return videoItem;
+        }
+
+        // Populate the video grid
+        const videoGrid = document.getElementById('videoGrid');
+        videos.forEach(video => {
+            const videoItem = createVideoItem(video);
+            videoGrid.appendChild(videoItem);
+        });
+    </script>
+</body>
+</html>
